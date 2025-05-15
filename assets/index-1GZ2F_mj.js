@@ -9622,9 +9622,9 @@ const useErrorMessage = () => {
       }
     };
   }, [errorMessage]);
-  const handleErrorMessage = (newErrorMessage) => {
+  const handleErrorMessage = reactExports.useCallback((newErrorMessage) => {
     setErrorMessage(newErrorMessage);
-  };
+  }, []);
   return { errorMessage, handleErrorMessage };
 };
 function App() {
