@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { ApiProvider } from "./context/ApiContext/ApiContext";
+import { ToastProvider } from "./context/ToastContext/ToastContext";
+import ProductListPage from "./page/ProductListPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>React Shopping Products</h1>
-    </>
+    <ToastProvider>
+      <ApiProvider>
+        <ProductListPage />
+      </ApiProvider>
+    </ToastProvider>
   );
 }
 
